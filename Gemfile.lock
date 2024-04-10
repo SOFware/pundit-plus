@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    pundit-plus (0.1.0)
+    pundit-plus (0.1.1)
       pundit
       pundit-matchers
 
