@@ -22,6 +22,8 @@ Gem::Specification.new do |spec|
   spec.executables = spec.files.grep(%r{\Aexe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
 
+  spec.license = "MIT"
+
   # Uncomment to register a new dependency of your gem
   spec.add_dependency "pundit"
   spec.add_dependency "pundit-matchers"
