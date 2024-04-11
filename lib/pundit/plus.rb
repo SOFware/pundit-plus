@@ -24,7 +24,7 @@ module Pundit
         "permitted_attributes"
       end
 
-      required = params.require(
+      params.require(
         PolicyFinder.new(record).param_key
       ).permit(
         *send(param_method)
