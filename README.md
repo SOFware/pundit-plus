@@ -52,8 +52,8 @@ class MyPolicy < ApplicationPolicy
   end
 
   # Return the params for the action but require a special key
-  def params_for_create(params)
-    params_for(@record, params, :create).tap do |params|
+  def params_for_update(params)
+    params_for(@record, params, :update).tap do |params|
       params.require(:special_key)
     end
   end
