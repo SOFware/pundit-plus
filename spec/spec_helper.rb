@@ -86,3 +86,17 @@ RSpec.configure do |config|
   # as the one that triggered the failure.
   Kernel.srand config.seed
 end
+
+class Controller
+  include Pundit::Authorization
+  # Mark protected methods public so they may be called in test
+  public(*Pundit::Authorization.protected_instance_methods)
+
+  attr_reader :current_user, :action_name, :params
+
+  def initialize(current_user, action_name, params)
+    @current_user = current_user
+    @action_name = action_name
+    @params = params
+  end
+end

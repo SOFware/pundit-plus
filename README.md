@@ -42,6 +42,18 @@ class MyPolicy < ApplicationPolicy
       super
     end
   end
+
+  def initialize(user, record)
+    @user = user
+    @record = record
+  end
+
+  # Return the params for the action but require a special key
+  def params_for_create(params)
+    params_for(@record, params, :create).tap do |params|
+      params.require(:special_key)
+    end
+  end
 end
 ```
 
