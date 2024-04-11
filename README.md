@@ -57,6 +57,10 @@ class MyPolicy < ApplicationPolicy
       params.require(:special_key)
     end
   end
+
+  def permitted_attributes
+    %i[name other special_key]
+  end
 end
 
 class SomeController < ApplicationController
