@@ -2,6 +2,9 @@
 
 Add some extra features to Pundit.
 
+- Custom exceptions
+- Manage required or permitted params from within your policy classes
+
 ## Installation
 
 Install the gem and add to the application's Gemfile by executing:
