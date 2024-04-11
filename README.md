@@ -58,6 +58,12 @@ class MyPolicy < ApplicationPolicy
     end
   end
 end
+
+class SomeController < ApplicationController
+  def update
+    @some_record.update(params_for_action(@some_record))
+  end
+end
 ```
 
 ## Development
