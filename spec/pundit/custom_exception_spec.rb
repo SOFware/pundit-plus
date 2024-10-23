@@ -59,6 +59,6 @@ RSpec.describe "Pundit.authorize" do
 
     expect do
       Pundit.authorize(user, record, query)
-    end.to raise_error(Pundit::NotAuthorizedError).with_message(/not allowed to create?/)
+    end.to raise_error(Pundit::NotAuthorizedError).with_message(/not allowed to UserPolicy#create?/)
   end
 end
