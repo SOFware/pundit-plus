@@ -13,8 +13,9 @@ class UserPolicy
 
   class CustomError < Pundit::NotAuthorizedError
     def initialize(options = {})
-      options[:message] ||= "Custom exception from policy"
-      super(options)
+      options_with_message = options.dup
+      options_with_message[:message] ||= "Custom exception from policy"
+      super(options_with_message)
     end
   end
 
