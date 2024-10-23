@@ -21,4 +21,9 @@ module Pundit
     end
   end
 end
-Pundit.singleton_class.prepend(Pundit::Plus::CustomException)
+
+if Pundit.const_defined?(:Context)
+  Pundit::Context.prepend(Pundit::Plus::CustomException)
+else
+  Pundit.singleton_class.prepend(Pundit::Plus::CustomException)
+end
