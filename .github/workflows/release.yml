@@ -23,4 +23,3 @@ jobs:
       auto_merge: ${{ github.event_name == 'workflow_dispatch' && inputs.auto_merge || false }}
     secrets:
       rubygems_api_key: ${{ secrets.RUBYGEMS_API_KEY }}
-      github_token: ${{ secrets.GITHUB_TOKEN }}
