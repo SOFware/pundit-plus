@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 
 ## [0.1.4] - Unreleased
 
+### Added
+
+- Auto-release to rubygem build from PR
+
 ### Fixed
 
 - Fixed incorrect spec after Pundit 2.4 release.

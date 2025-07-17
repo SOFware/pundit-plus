@@ -1,0 +1,26 @@
+name: Release Process
+
+on:
+  workflow_dispatch:
+    inputs:
+      auto_merge:
+        description: 'Automatically merge the release PR if checks pass'
+        required: false
+        default: false
+        type: boolean
+  pull_request:
+    types: [closed]
+    branches:
+      - main
+
+jobs:
+  release:
+    uses: SOFware/reissue/.github/workflows/shared-ruby-gem-release.yml@main
+    with:
+      gem_name: pundit-plus
+      ruby_version: ruby
+      version_file_path: lib/pundit/plus/version.rb
+      auto_merge: ${{ github.event_name == 'workflow_dispatch' && inputs.auto_merge || false }}
+    secrets:
+      rubygems_api_key: ${{ secrets.RUBYGEMS_API_KEY }}
+      github_token: ${{ secrets.GITHUB_TOKEN }}
