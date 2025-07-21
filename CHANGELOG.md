@@ -12,6 +12,10 @@ All notable changes to this project will be documented in this file.
 
 - Fixed incorrect spec after Pundit 2.4 release.
 
+### Changed
+
+- Changed code coverage to use Qlty
+
 ## [0.1.3] - 2024-10-23
 
 ### Added

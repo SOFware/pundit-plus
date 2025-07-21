@@ -51,7 +51,7 @@ RSpec.describe "Controller params_for_action" do
       controller.params_for_action(account)
     end.to raise_error(
       ActionController::ParameterMissing,
-      "param is missing or the value is empty: special"
+      "param is missing or the value is empty or invalid: special"
     )
   end
 
