@@ -29,5 +29,4 @@ jobs:
       git_user_name: SOFware
       auto_merge: ${{ inputs.auto_merge || false }}
       manual_release: ${{ inputs.manual_release || false }}
-    secrets:
-      rubygems_api_key: ${{ secrets.RUBYGEMS_API_KEY }}
+      use_trusted_publishing: true
