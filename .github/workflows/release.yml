@@ -8,6 +8,11 @@ on:
         required: false
         default: false
         type: boolean
+      manual_release:
+        description: 'Manually release an already-finalized version (skips prepare, goes straight to publish)'
+        required: false
+        default: false
+        type: boolean
   pull_request:
     types: [closed]
     branches:
@@ -18,8 +23,11 @@ jobs:
     uses: SOFware/reissue/.github/workflows/shared-ruby-gem-release.yml@main
     with:
       gem_name: pundit-plus
-      ruby_version: ruby
       version_file_path: lib/pundit/plus/version.rb
-      auto_merge: ${{ github.event_name == 'workflow_dispatch' && inputs.auto_merge || false }}
+      ruby_version: ruby
+      git_user_email: gems@sofwarellc.com
+      git_user_name: SOFware
+      auto_merge: ${{ inputs.auto_merge || false }}
+      manual_release: ${{ inputs.manual_release || false }}
     secrets:
       rubygems_api_key: ${{ secrets.RUBYGEMS_API_KEY }}
