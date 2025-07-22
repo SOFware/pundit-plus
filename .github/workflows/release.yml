@@ -29,4 +29,4 @@ jobs:
       git_user_name: SOFware
       auto_merge: ${{ inputs.auto_merge || false }}
       manual_release: ${{ inputs.manual_release || false }}
-      use_trusted_publishing: true
+      use_trusted_publishing: false
