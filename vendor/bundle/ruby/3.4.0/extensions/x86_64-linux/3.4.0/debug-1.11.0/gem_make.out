@@ -1,0 +1,19 @@
+current directory: /home/runner/work/pundit-plus/pundit-plus/vendor/bundle/ruby/3.4.0/gems/debug-1.11.0/ext/debug
+/opt/hostedtoolcache/Ruby/3.4.5/x64/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /home/runner/work/pundit-plus/pundit-plus/vendor/bundle/ruby/3.4.0/gems/debug-1.11.0/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20250721-2140-8yoctn sitelibdir\=./.gem.20250721-2140-8yoctn clean
+
+current directory: /home/runner/work/pundit-plus/pundit-plus/vendor/bundle/ruby/3.4.0/gems/debug-1.11.0/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20250721-2140-8yoctn sitelibdir\=./.gem.20250721-2140-8yoctn
+compiling debug.c
+compiling iseq_collector.c
+linking shared-object debug/debug.so
+
+current directory: /home/runner/work/pundit-plus/pundit-plus/vendor/bundle/ruby/3.4.0/gems/debug-1.11.0/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20250721-2140-8yoctn sitelibdir\=./.gem.20250721-2140-8yoctn install
+/usr/bin/install -c -m 0755 debug.so ./.gem.20250721-2140-8yoctn/debug
+
+current directory: /home/runner/work/pundit-plus/pundit-plus/vendor/bundle/ruby/3.4.0/gems/debug-1.11.0/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20250721-2140-8yoctn sitelibdir\=./.gem.20250721-2140-8yoctn clean
