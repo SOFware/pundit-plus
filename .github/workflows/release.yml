@@ -29,4 +29,5 @@ jobs:
       git_user_name: SOFware
       auto_merge: ${{ inputs.auto_merge || false }}
       manual_release: ${{ inputs.manual_release || false }}
-      use_trusted_publishing: false
+      use_trusted_publishing: true
+      oidc_role_id: rg_oidc_akr_7ooqz7zfa4xpqsvb42ec
