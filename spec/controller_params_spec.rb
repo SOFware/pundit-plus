@@ -12,6 +12,7 @@ end
 
 class AccountPolicy
   include Pundit::Plus
+
   def initialize(user, record)
     @user = user
     @record = record
