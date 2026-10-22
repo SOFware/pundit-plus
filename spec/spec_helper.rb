@@ -89,6 +89,7 @@ end
 
 class Controller
   include Pundit::Authorization
+
   # Mark protected methods public so they may be called in test
   public(*Pundit::Authorization.protected_instance_methods)
 

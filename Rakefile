@@ -11,4 +11,5 @@ require "reissue/gem"
 
 Reissue::Task.create do |task|
   task.version_file = "lib/pundit/plus/version.rb"
+  task.fragment = :git
 end
